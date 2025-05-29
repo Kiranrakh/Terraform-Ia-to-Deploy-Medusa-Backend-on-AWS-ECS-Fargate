@@ -1,0 +1,19 @@
+[
+  {
+    "name": "medusa",
+    "image": "medusajs/medusa:v1.13.0",
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "hostPort": 3000
+      }
+    ],
+    "essential": true,
+    "environment": [
+      {
+        "name": "NODE_ENV",
+        "value": "production"
+      }
+    ]
+  }
+]
