@@ -9,7 +9,7 @@ resource "aws_ecs_task_definition" "medusa_task" {
   cpu                      = "512"
   memory                   = "1024"
   execution_role_arn       = aws_iam_role.ecsTaskExecutionRole.arn
-  container_definitions    = file("${path.module}/ecs_task_definition.json")
+  container_definitions    = file("${path.module}/ecs-task-definition.json")
 }
 
 resource "aws_ecs_service" "medusa_service" {
