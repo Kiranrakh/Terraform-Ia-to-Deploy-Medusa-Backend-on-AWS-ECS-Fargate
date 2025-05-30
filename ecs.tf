@@ -24,4 +24,10 @@ resource "aws_ecs_service" "medusa_service" {
     assign_public_ip = true
     security_groups = [aws_security_group.ecs_sg.id]
   }
+   depends_on = [
+  aws_iam_role.ecsTaskExecutionRole,
+  aws_ecs_task_definition.medusa_task
+   ]
+
+
 }
